@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gagdmac/wpTheme"
+    "url": "git+https://github.com/gagdmac/wp5Theme"
   },
   "author": "Gabriel Garcia Diaz",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/gagdmac/wpTheme/issues"
+    "url": "https://github.com/gagdmac/wp5Theme/issues"
   },
-  "homepage": "https://github.com/gagdmac/wpTheme#readme",
-  "dependencies": {
+  "homepage": "https://github.com/gagdmac/wp5Theme#readme",
+  "Devdependencies": {
     "autoprefixer": "^6.5.2",
     "browser-sync": "^2.17.6",
     "gulp": "^4.0.1",
