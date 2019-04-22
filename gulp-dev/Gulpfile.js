@@ -1,4 +1,4 @@
-var themename = 'wpTheme';
+var themename = 'humescores';
 
 var gulp = require('gulp'),
 	// Prepare and optimize code etc
@@ -58,7 +58,7 @@ gulp.task('javascript', function() {
 gulp.task('watch', function() {
 	browserSync.init({ 
 		open: 'external',
-		proxy: 'http://localhost/WP/firstTheme/',
+		proxy: 'humescores.dev',
 		port: 8080
 	});
 	gulp.watch([root + '**/*.css', root + '**/*.scss' ], ['css']);
