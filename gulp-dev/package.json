@@ -27,5 +27,8 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.2.0",
     "jshint": "^2.9.4"
+  },
+  "dependencies": {
+    "gulp": "^4.0.1"
   }
 }
