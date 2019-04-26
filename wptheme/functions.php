@@ -83,6 +83,70 @@ if ( ! function_exists( 'wptheme_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'wptheme_setup' );
 
+
+
+
+/**
+ * Register custom fonts.
+ */
+function wpTheme_fonts_url() {
+	$fonts_url = '';
+
+	/**
+	 * Translators: If there are characters in your language that are not
+	 * supported by Open Sans and Crimson Text, translate this to 'off'. Do not translate
+	 * into your own language.
+	 */
+	$open_sans = _x( 'on', 'Open Sans font: on or off', 'wpTheme' );
+	$crimson_text = _x( 'on', 'Crimson Text font: on or off', 'wpTheme' );
+
+	$font_families = array();
+	
+	if ( 'off' !== $open_sans ) {
+		$font_families[] = 'Open Sans:400,400i,600,800';
+	}
+	
+	if ( 'off' !== $crimson_text ) {
+		$font_families[] = 'Crimson Text:400,400i,600,700,700i';
+	}
+	
+	
+	if ( in_array( 'on', array($open_sans, $crimson_text) ) ) {
+
+		$query_args = array(
+			'family' => urlencode( implode( '|', $font_families ) ),
+			'subset' => urlencode( 'latin,latin-ext' ),
+		);
+
+		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+	}
+
+	return esc_url_raw( $fonts_url );
+}
+
+
+/**
+ * Add preconnect for Google Fonts.
+ *
+ * @since wp Theme 1.0
+ *
+ * @param array  $urls           URLs to print for resource hints.
+ * @param string $relation_type  The relation type the URLs are printed.
+ * @return array $urls           URLs to print for resource hints.
+ */
+function wpTheme_resource_hints( $urls, $relation_type ) {
+	if ( wp_style_is( 'wpTheme-fonts', 'queue' ) && 'preconnect' === $relation_type ) {
+		$urls[] = array(
+			'href' => 'https://fonts.gstatic.com',
+			'crossorigin',
+		);
+	}
+
+	return $urls;
+}
+add_filter( 'wp_resource_hints', 'wpTheme_resource_hints', 10, 2 );
+
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -120,6 +184,11 @@ add_action( 'widgets_init', 'wptheme_widgets_init' );
  * Enqueue scripts and styles.
  */
 function wptheme_scripts() {
+    
+    // Enqueue Google Fonts: Open Sans and Crimson
+    
+        wp_enqueue_style('wpTheme-fonts', wpTheme_fonts_url());
+    
 	wp_enqueue_style( 'wptheme-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'wptheme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );

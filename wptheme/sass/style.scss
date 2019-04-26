@@ -3,7 +3,7 @@ Theme Name: wpTheme
 Theme URI: http://underscores.me/
 Author: Gabriel Garcia
 Author URI: http://gagdfullstackdeveloper.com/
-Description: WP Test Theme 0.1
+Description: WordPress 5.1.1 Test Theme 0.0.1. Undescore Theme from automatic
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -86,14 +86,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "modules/clearings";
 
 /*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-@import "site/secondary/widgets";
-
-/*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
 @import "site/site";
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+@import "site/secondary/widgets";
 
 /*--------------------------------------------------------------
 # Infinite scroll
