@@ -27,7 +27,7 @@ img {
 }
 
 figure {
-	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+	margin: 0; /* Extra wide images within figure tags don't overflow the content area. */
 }
 
 @import "tables";
