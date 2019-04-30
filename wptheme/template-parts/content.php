@@ -11,6 +11,9 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+            
+            <?php wptheme_the_category_list(); ?>
+            
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -22,8 +25,9 @@
 			?>
 			<div class="entry-meta">
 				<?php
+                                wptheme_posted_by();
 				wptheme_posted_on();
-				wptheme_posted_by();
+				
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
