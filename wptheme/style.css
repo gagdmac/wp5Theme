@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: wpTheme
 Theme URI: http://underscores.me/
@@ -13,11 +14,11 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-wpTheme is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Humescores is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
@@ -44,118 +45,85 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
-/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
-/* Document
-	 ========================================================================== */
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
 html {
-	line-height: 1.15;
-	/* 1 */
+	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
-	/* 2 */
+	-ms-text-size-adjust: 100%;
 }
 
-/* Sections
-	 ========================================================================== */
-/**
- * Remove the margin in all browsers.
- */
 body {
 	margin: 0;
 }
 
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+	display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+[hidden],
+template {
+	display: none;
+}
+
+a {
+	background-color: transparent;
+}
+
+a:active,
+a:hover {
+	outline: 0;
+}
+
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+dfn {
+	font-style: italic;
+}
+
 h1 {
 	font-size: 2em;
 	margin: 0.67em 0;
 }
 
-/* Grouping content
-	 ========================================================================== */
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
-hr {
-	box-sizing: content-box;
-	/* 1 */
-	height: 0;
-	/* 1 */
-	overflow: visible;
-	/* 2 */
+mark {
+	background: #ff0;
+	color: #000;
 }
 
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-pre {
-	font-family: monospace, monospace;
-	/* 1 */
-	font-size: 1em;
-	/* 2 */
-}
-
-/* Text-level semantics
-	 ========================================================================== */
-/**
- * Remove the gray background on active links in IE 10.
- */
-a {
-	background-color: transparent;
-}
-
-/**
- * 1. Remove the bottom border in Chrome 57-
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
-abbr[title] {
-	border-bottom: none;
-	/* 1 */
-	text-decoration: underline;
-	/* 2 */
-	text-decoration: underline dotted;
-	/* 2 */
-}
-
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
-b,
-strong {
-	font-weight: bolder;
-}
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-code,
-kbd,
-samp {
-	font-family: monospace, monospace;
-	/* 1 */
-	font-size: 1em;
-	/* 2 */
-}
-
-/**
- * Add the correct font size in all browsers.
- */
 small {
 	font-size: 80%;
 }
 
-/**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
- */
 sub,
 sup {
 	font-size: 75%;
@@ -164,216 +132,128 @@ sup {
 	vertical-align: baseline;
 }
 
-sub {
-	bottom: -0.25em;
-}
-
 sup {
 	top: -0.5em;
 }
 
-/* Embedded content
-	 ========================================================================== */
-/**
- * Remove the border on images inside links in IE 10.
- */
-img {
-	border-style: none;
+sub {
+	bottom: -0.25em;
 }
 
-/* Forms
-	 ========================================================================== */
-/**
- * 1. Change the font styles in all browsers.
- * 2. Remove the margin in Firefox and Safari.
- */
+img {
+	border: 0;
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+figure {
+	margin: 1em 40px;
+}
+
+hr {
+	box-sizing: content-box;
+	height: 0;
+}
+
+pre {
+	overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
 button,
 input,
 optgroup,
 select,
 textarea {
-	font-family: inherit;
-	/* 1 */
-	font-size: 100%;
-	/* 1 */
-	line-height: 1.15;
-	/* 1 */
+	color: inherit;
+	font: inherit;
 	margin: 0;
-	/* 2 */
 }
 
-/**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
- */
-button,
-input {
-	/* 1 */
+button {
 	overflow: visible;
 }
 
-/**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
- */
 button,
 select {
-	/* 1 */
 	text-transform: none;
 }
 
-/**
- * Correct the inability to style clickable types in iOS and Safari.
- */
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
 	-webkit-appearance: button;
+	cursor: pointer;
 }
 
-/**
- * Remove the inner border and padding in Firefox.
- */
+button[disabled],
+html input[disabled] {
+	cursor: default;
+}
+
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-	border-style: none;
+input::-moz-focus-inner {
+	border: 0;
 	padding: 0;
 }
 
-/**
- * Restore the focus styles unset by the previous rule.
- */
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-	outline: 1px dotted ButtonText;
+input {
+	line-height: normal;
 }
 
-/**
- * Correct the padding in Firefox.
- */
-fieldset {
-	padding: 0.35em 0.75em 0.625em;
-}
-
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *		`fieldset` elements in all browsers.
- */
-legend {
+input[type="checkbox"],
+input[type="radio"] {
 	box-sizing: border-box;
-	/* 1 */
-	color: inherit;
-	/* 2 */
-	display: table;
-	/* 1 */
-	max-width: 100%;
-	/* 1 */
 	padding: 0;
-	/* 3 */
-	white-space: normal;
-	/* 1 */
 }
 
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
-progress {
-	vertical-align: baseline;
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	height: auto;
 }
 
-/**
- * Remove the default vertical scrollbar in IE 10+.
- */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+fieldset {
+	border: 1px solid #c0c0c0;
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+	border: 0;
+	padding: 0;
+}
+
 textarea {
 	overflow: auto;
 }
 
-/**
- * 1. Add the correct box sizing in IE 10.
- * 2. Remove the padding in IE 10.
- */
-[type="checkbox"],
-[type="radio"] {
-	box-sizing: border-box;
-	/* 1 */
+optgroup {
+	font-weight: bold;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+td,
+th {
 	padding: 0;
-	/* 2 */
-}
-
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-	height: auto;
-}
-
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
-[type="search"] {
-	-webkit-appearance: textfield;
-	/* 1 */
-	outline-offset: -2px;
-	/* 2 */
-}
-
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
-[type="search"]::-webkit-search-decoration {
-	-webkit-appearance: none;
-}
-
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
- */
-::-webkit-file-upload-button {
-	-webkit-appearance: button;
-	/* 1 */
-	font: inherit;
-	/* 2 */
-}
-
-/* Interactive
-	 ========================================================================== */
-/*
- * Add the correct display in Edge, IE 10+, and Firefox.
- */
-details {
-	display: block;
-}
-
-/*
- * Add the correct display in all browsers.
- */
-summary {
-	display: list-item;
-}
-
-/* Misc
-	 ========================================================================== */
-/**
- * Add the correct display in IE 10+.
- */
-template {
-	display: none;
-}
-
-/**
- * Add the correct display in IE 10.
- */
-[hidden] {
-	display: none;
 }
 
 /*--------------------------------------------------------------
@@ -383,21 +263,19 @@ body,
 button,
 input,
 select,
-optgroup,
 textarea {
-	color: #404040;
-	font-family: "Crimson Text", Georgia, Cambria, "Times New Roman", Times serif;
+	color: #000;
+	font-family: "PT Serif", Georgia, Cambria, "Times New Roman", Times, serif;
 	font-size: 18px;
 	font-size: 1.125rem;
 	line-height: 1.5;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 600px) {
 	body,
 	button,
 	input,
 	select,
-	optgroup,
 	textarea {
 		font-size: 20px;
 		font-size: 1.25rem;
@@ -405,8 +283,10 @@ textarea {
 }
 
 h1, h2, h3, h4, h5, h6 {
+	margin-top: .75em;
+	margin-bottom: .25em;
+	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	clear: both;
-	font-family: "Open Sans", "Lucida Grande", "Lucida Grande", "Lucida Sand Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
 
 h1 {
@@ -434,7 +314,8 @@ h6 {
 }
 
 p {
-	margin-bottom: 1.5em;
+	margin-top: .5em;
+	margin-bottom: 1em;
 }
 
 dfn, cite, em, i {
@@ -442,7 +323,22 @@ dfn, cite, em, i {
 }
 
 blockquote {
-	margin: 0 1.5em;
+	position: relative;
+	margin: 0 0 1em;
+	background: #eee;
+	padding: 1em 2em .5em 5em;
+	font-style: italic;
+}
+
+blockquote:before {
+	position: absolute;
+	top: -.2em;
+	left: -.13em;
+	content: "“";
+	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-size: 12em;
+	line-height: 100%;
+	color: white;
 }
 
 address {
@@ -491,13 +387,17 @@ html {
 *,
 *:before,
 *:after {
-	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 	box-sizing: inherit;
 }
 
 body {
 	background: #fff;
 	/* Fallback for when there is no custom background color defined. */
+}
+
+blockquote, q {
+	quotes: "" "";
 }
 
 hr {
@@ -508,7 +408,7 @@ hr {
 }
 
 ul, ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 1.5em;
 }
 
 ul {
@@ -522,7 +422,7 @@ ol {
 li > ul,
 li > ol {
 	margin-bottom: 0;
-	margin-left: 1.5em;
+	margin-left: .5em;
 }
 
 dt {
@@ -546,8 +446,42 @@ figure {
 }
 
 table {
+	border-collapse: collapse;
 	margin: 0 0 1.5em;
 	width: 100%;
+}
+
+thread th {
+	border-bottom: 2px solid #bbb;
+	padding-bottom: .5em;
+}
+
+td,
+th {
+	vertical-align: top;
+}
+
+th {
+	padding: .4em;
+	text-align: left;
+}
+
+tr {
+	border-bottom: 1px solid #eee;
+}
+
+td {
+	padding: .4em;
+}
+
+th:first-child,
+td:first-child {
+	padding-left: 0;
+}
+
+th:last-child,
+td:last-child {
+	padding-right: 0;
 }
 
 /*--------------------------------------------------------------
@@ -561,6 +495,7 @@ input[type="submit"] {
 	border-color: black;
 	background: transparent;
 	color: black;
+	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	font-size: 20px;
 	font-size: 1.25rem;
 	line-height: 1;
@@ -637,15 +572,15 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: #000;
 }
 
 a:visited {
-	color: purple;
+	color: #000;
 }
 
 a:hover, a:focus, a:active {
-	color: midnightblue;
+	color: #b51c35;
 }
 
 a:focus {
@@ -654,6 +589,24 @@ a:focus {
 
 a:hover, a:active {
 	outline: 0;
+}
+
+.page-content a,
+.entry-content a,
+.entry-summary a,
+.comment-content a {
+	text-decoration: none;
+	border-bottom: 3px solid #b51c35;
+}
+
+.page-content a:focus, .page-content a:hover,
+.entry-content a:focus,
+.entry-content a:hover,
+.entry-summary a:focus,
+.entry-summary a:hover,
+.comment-content a:focus,
+.comment-content a:hover {
+	color: #b51c35;
 }
 
 /*--------------------------------------------------------------
@@ -686,18 +639,11 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
 .screen-reader-text {
-	border: 0;
 	clip: rect(1px, 1px, 1px, 1px);
-	-webkit-clip-path: inset(50%);
-	        clip-path: inset(50%);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
 	position: absolute !important;
+	height: 1px;
 	width: 1px;
-	word-wrap: normal !important;
-	/* Many screen reader and browser combinations announce broken words as they would appear visually. */
+	overflow: hidden;
 }
 
 .screen-reader-text:focus {
@@ -705,9 +651,7 @@ a:hover, a:active {
 	border-radius: 3px;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	clip: auto !important;
-	-webkit-clip-path: none;
-	        clip-path: none;
-	color: #21759b;
+	color: #000;
 	display: block;
 	font-size: 17.5px;
 	font-size: 1.09375rem;
@@ -780,7 +724,7 @@ a:hover, a:active {
 # Content
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-## Global layout
+## Global layouts
 --------------------------------------------------------------*/
 .site-content {
 	padding: 1em;
@@ -808,7 +752,7 @@ a:hover, a:active {
 .site-header {
 	position: relative;
 	padding: 1em;
-	font-family: "Open Sans", "Lucida Grande", "Lucida Grande", "Lucida Sand Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	color: #fff;
 	background-color: #002254;
 }
@@ -891,7 +835,7 @@ Header Menu
 */
 .main-navigation {
 	display: block;
-	font-family: "Open Sans", "Lucida Grande", "Lucida Grande", "Lucida Sand Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	font-weight: 400;
 	clear: left;
 }
@@ -950,7 +894,7 @@ Header Menu
 }
 
 .main-navigation .menu-item-has-children,
-.main-navigation .page-item-has-children {
+.main-navigation .page_item_has_children {
 	min-width: 218px;
 }
 
@@ -982,7 +926,7 @@ button.dropdown-toggle {
 	border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* Toggle small menu and sub-menus on */
+/* Toggle small menu and children on */
 .toggled-on ul,
 .sub-menu.toggled-on {
 	display: block;
@@ -1027,147 +971,13 @@ button.dropdown-toggle {
 		-ms-flex-pack: end;
 		    justify-content: flex-end;
 		padding-top: 0;
-	}
-}
-
-.main-navigation {
-	display: block;
-	font-family: "Open Sans", "Lucida Grande", "Lucida Grande", "Lucida Sand Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-	font-weight: 400;
-	clear: left;
-}
-
-.main-navigation ul {
-	display: none;
-	list-style: none;
-	margin: 0;
-	padding-top: 1em;
-	padding-left: 0;
-}
-
-.main-navigation ul ul {
-	display: none;
-	top: 1.5em;
-	z-index: 99999;
-}
-
-.main-navigation ul ul ul {
-	top: 0;
-}
-
-.main-navigation ul ul li {
-	padding-left: 1em;
-}
-
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-	left: 100%;
-}
-
-.main-navigation ul ul a {
-	width: 200px;
-}
-
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-	left: auto;
-}
-
-.main-navigation li {
-	position: relative;
-}
-
-.main-navigation a {
-	display: inline-block;
-	width: 100%;
-	padding: .5em 1em .5em 0;
-	text-decoration: none;
-	color: #fff;
-}
-
-.main-navigation a:hover,
-.main-navigation a:focus {
-	text-decoration: underline;
-}
-
-.main-navigation .menu-item-has-children,
-.main-navigation .page-item-has-children {
-	min-width: 218px;
-}
-
-.main-navigation .menu-item-has-children > a,
-.main-navigation .page_item_has_children > a {
-	padding-right: 2em;
-}
-
-button.dropdown-toggle {
-	position: absolute;
-	right: 0;
-	border: none;
-	background: inherit;
-	color: white;
-	line-height: 1.5em;
-	padding: .4em 1em .4em .5em;
-}
-
-.menu-toggle {
-	position: absolute;
-	top: 0;
-	right: 0;
-	display: block;
-	margin: 1.2em 1.2em 0 0;
-	padding: .6em .8em;
-	font-size: 80%;
-	text-transform: uppercase;
-	color: white;
-	border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-/* Toggle small menu and sub-menus on */
-.toggled-on ul,
-.sub-menu.toggled-on {
-	display: block;
-}
-
-@media screen and (min-width: 600px) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation .menu-item-has-children > a,
-	.main-navigation .page_item_has_children > a {
-		padding-right: 2em;
-		background: rgba(255, 255, 255, 0.1);
-	}
-	.main-navigation ul {
-		display: block;
-		display: -ms-flexbox;
-		display: flex;
-		-ms-flex-wrap: wrap;
-		    flex-wrap: wrap;
-	}
-	.main-navigation ul ul {
-		-ms-flex-direction: column;
-		    flex-direction: column;
-		background: rgba(255, 255, 255, 0.1);
-		margin-left: 0;
-	}
-	.main-navigation ul ul li {
-		padding-left: 0;
-	}
-	.main-navigation ul ul li a {
-		width: 218px;
-		background: none;
-	}
-	.main-navigation ul li a {
-		padding: .4em 1em;
-	}
-}
-
-@media screen and (min-width: 900px) {
-	.main-navigation ul {
-		-ms-flex-pack: end;
-		    justify-content: flex-end;
-		padding-top: 0;
+		/* If you want dropdowns to open on hover, uncomment this: */
+		/*
+			li:hover > ul,
+				li:focus > ul {
+				display: block;
+			}
+			*/
 	}
 }
 
@@ -1178,13 +988,12 @@ button.dropdown-toggle {
 	display: block;
 }
 
-.post,
-.page {
+.hentry {
 	margin: 0 0 1.5em;
 }
 
 .entry-header {
-	font-family: "Open Sans", "Lucida Grande", "Lucida Grande", "Lucida Sand Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
 
 .cat-links {
@@ -1201,7 +1010,6 @@ button.dropdown-toggle {
 .cat-links a:focus, .cat-links a:hover {
 	background-color: #b51c35;
 	color: white;
-	padding: 0.2em .5em;
 }
 
 .entry-title {
@@ -1224,34 +1032,44 @@ button.dropdown-toggle {
 	border-bottom: 5px solid #b51c35;
 }
 
-.entry-meta {
+.entry-meta,
+.entry-footer {
 	font-size: 90%;
 }
 
-.entry-meta a {
+.entry-meta a,
+.entry-footer a {
 	font-weight: 700;
 	text-decoration: none;
 	color: black;
 }
 
-.entry-meta a:focus, .entry-meta a:hover {
+.entry-meta a:focus, .entry-meta a:hover,
+.entry-footer a:focus,
+.entry-footer a:hover {
 	color: black;
 	border-bottom: 3px solid #b51c35;
 }
 
 .byline::after {
-	content: '|';
+	content: "|";
 	margin: 0 .5em;
 }
 
 .comments-link::before,
 .edit-link::before {
-	content: '|';
+	content: "|";
 	margin: 0 .5em;
 }
 
+.byline,
 .updated:not(.published) {
 	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
 }
 
 .page-content,
@@ -1263,6 +1081,11 @@ button.dropdown-toggle {
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.entry-footer {
+	margin: 1.5em 0;
+	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -1282,7 +1105,7 @@ button.dropdown-toggle {
 .site-footer {
 	position: relative;
 	padding: 1em;
-	font-family: "Open Sans", "Lucida Grande", "Lucida Grande", "Lucida Sand Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	color: #fff;
 	background-color: #002254;
 	text-align: center;
@@ -1359,11 +1182,6 @@ embed,
 iframe,
 object {
 	max-width: 100%;
-}
-
-/* Make sure logo link wraps around logo image. */
-.custom-logo-link {
-	display: inline-block;
 }
 
 /*--------------------------------------------------------------

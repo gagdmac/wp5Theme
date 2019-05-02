@@ -6,14 +6,15 @@ input[type="submit"] {
 	border-color: black;
 	background: transparent;
 	color: black;
+	font-family: $font__sans;
 	@include font-size(1);
 	line-height: 1;
 	padding: .5em 1em;
 
-	&:hover,
+	&:hover ,
 	&:active,
 	&:focus {
 		background: white;
-                color: black;
+		color: black;
 	}
 }
